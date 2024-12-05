@@ -1,0 +1,186 @@
+# do sim_build/runsim.do
+# Questa Intel Starter FPGA Edition-64 vmap 2024.1 Lib Mapping Utility 2024.04 Apr 19 2024
+# vmap -c 
+# Copying C:/intelFPGA_pro/24.2/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vmap 2024.1 Lib Mapping Utility 2024.04 Apr 19 2024
+# vmap work sim_build/work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vcom 2024.1 Compiler 2024.04 Apr 19 2024
+# Start time: 17:51:18 on Sep 18,2024
+# vcom -work work "+acc" C:/Work/fir_filter_system/packages/fir_fixed_generics_package.vhdl C:/Work/fir_filter_system/packages/fixed_to_signed_package.vhdl C:/Work/fir_filter_system/rtl/fir_filter_fixed.vhdl C:/Work/fir_filter_system/rtl/fir_filter_axis.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package instance fixed_pkg
+# -- Loading package NUMERIC_STD
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling package fir_fixed_generics_package
+# -- Loading package fir_fixed_generics_package
+# -- Compiling package fixed_to_signed_package
+# -- Compiling package body fixed_to_signed_package
+# -- Loading package fixed_to_signed_package
+# -- Loading package fixed_to_signed_package
+# -- Compiling entity fir_filter_fixed
+# -- Compiling architecture firfixed of fir_filter_fixed
+# -- Compiling entity fir_filter_axis
+# -- Compiling architecture firaxis of fir_filter_axis
+# -- Loading entity fir_filter_fixed
+# End time: 17:51:18 on Sep 18,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish exit -t 1ps -foreign "cocotb_init C:/Python312/Lib/site-packages/cocotb/libs/cocotbfli_modelsim.dll" sim_build/work.fir_filter_axis 
+# Start time: 17:51:18 on Sep 18,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.1 win64 Apr 19 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_fixed_generics_package
+# Loading work.fixed_to_signed_package(body)
+# Loading work.fir_filter_axis(firaxis)#1
+# Loading work.fir_filter_fixed(firfixed)#1
+# Loading C:/Python312/Lib/site-packages/cocotb/libs/cocotbfli_modelsim.dll
+#      -.--ns INFO     gpi                                ..ib\fli\FliImpl.cpp:1150 in cocotb_init                     cocotb_init called
+#      -.--ns INFO     gpi                                ..mbed\gpi_embed.cpp:81   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:101  in gpi_print_registered_impl       FLI registered
+#      0.00ns INFO     cocotb                             Running on ModelSim for QuestaIntel Starter FPGA Edition-64 version 2024.1 2024.04
+# 
+#      0.00ns INFO     cocotb                             Running tests with cocotb v1.9.1 from C:\Python312\Lib\site-packages\cocotb
+# 
+#      0.00ns INFO     cocotb                             Seeding Python random module with 1726662081
+# 
+#      0.00ns INFO     cocotb.regression                  Found test fir_axis_test.AXIS_filter_test
+# 
+#      0.00ns INFO     cocotb.regression                  running AXIS_filter_test (1/1)
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter AXI stream source
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter cocotbext-axi version 0.1.24
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter Copyright (c) 2020 Alex Forencich
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter https://github.com/alexforencich/cocotbext-axi
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter AXI stream source configuration:
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter   Byte size: 32 bits
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter   Data width: 32 bits (1 bytes)
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter AXI stream source signals:
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter   tdata width: 32 bits
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter   tdest: not present
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter   tid: not present
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter   tkeep: not present
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter   tlast width: 1 bits
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter   tready width: 1 bits
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter   tuser: not present
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter   tvalid width: 1 bits
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter Reset de-asserted
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter AXI stream sink
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter cocotbext-axi version 0.1.24
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter Copyright (c) 2020 Alex Forencich
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter https://github.com/alexforencich/cocotbext-axi
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter AXI stream sink configuration:
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter   Byte size: 32 bits
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter   Data width: 32 bits (1 bytes)
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter AXI stream sink signals:
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter   tdata width: 32 bits
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter   tdest: not present
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter   tid: not present
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter   tkeep: not present
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter   tlast width: 1 bits
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter   tready width: 1 bits
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter   tuser: not present
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter   tvalid width: 1 bits
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.m_axis_filter Reset de-asserted
+# 
+#     25.00ns INFO     cocotb.fir_filter_axis             AXIS_source is waiting for data
+# 
+#     25.00ns INFO     ..tb.fir_filter_axis.s_axis_filter TX frame: AxiStreamFrame(tdata=[32767, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=25000, sim_time_end=None)
+# 
+#    535.00ns INFO     cocotb.fir_filter_axis             AXIS_source has sent data
+# 
+#    825.00ns INFO     ..tb.fir_filter_axis.m_axis_filter RX frame: AxiStreamFrame(tdata=[4294967263, 4294967275, 13, 51, 55, 0, 4294967205, 4294967160, 4294967240, 132, 277, 199, 4294967169, 4294966825, 4294966815, 0, 690, 976, 384, 4294966401, 4294965392, 4294965849, 1041, 4893, 8416, 9840, 8416, 4893, 1041, 4294965849, 4294965392, 4294966401, 384, 976, 690, 0, 4294966815, 4294966825, 4294967169, 199, 277, 132, 4294967240, 4294967160, 4294967205, 0, 55, 51, 13, 4294967275, 4294967263], tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=325000, sim_time_end=825000)
+# 
+#    825.00ns INFO     cocotb.fir_filter_axis             AXIS_sink has received data
+# 
+#    825.00ns INFO     cocotb.fir_filter_axis             [4294967247, 4294967259, -3, 51, 55, 0, 4294967205, 4294967144, 4294967224, 132, 277, 199, 4294967169, 4294966809, 4294966799, 0, 690, 976, 384, 4294966401, 4294965392, 4294965833, 1041, 4877, 8416, 9840, 8416, 4877, 1041, 4294965833, 4294965392, 4294966401, 384, 976, 690, 0, 4294966799, 4294966809, 4294967169, 199, 277, 132, 4294967224, 4294967144, 4294967205, 0, 55, 51, -3, 4294967259, 4294967247]
+# 
+#    825.00ns INFO     cocotb.fir_filter_axis             51
+# 
+#    825.00ns INFO     cocotb.fir_filter_axis             Errors count: 0
+# 
+#    825.00ns INFO     cocotb.regression                  AXIS_filter_test passed
+# 
+#    825.00ns INFO     cocotb.regression                  ****************************************************************************************
+# 
+#                                                         ** TEST                            STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+# 
+#                                                         ****************************************************************************************
+# 
+#                                                         ** fir_axis_test.AXIS_filter_test   PASS         825.00           0.03      31628.69  **
+# 
+#                                                         ****************************************************************************************
+# 
+#                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                  825.00           0.20       4177.28  **
+# 
+#                                                         ****************************************************************************************
+# 
+#                                                         
+# 
+# Simulation halt requested by foreign interface.
+# End time: 17:51:21 on Sep 18,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 1

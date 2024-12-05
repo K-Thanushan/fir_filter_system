@@ -1,0 +1,389 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date              : Wed Oct  2 11:33:48 2024
+| Host              : THANUSH-LAPTOP running 64-bit major release  (build 9200)
+| Command           : report_timing_summary -file ../reports/impl_timing.rpt
+| Design            : fir_filter_axis
+| Device            : xczu7ev-ffvc1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                    Violations  
+---------  --------  -----------------------------  ----------  
+TIMING-18  Warning   Missing input or output delay  70          
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (20)
+6. checking no_output_delay (34)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (20)
+-------------------------------
+ There are 20 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (34)
+--------------------------------
+ There are 34 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      4.368        0.000                      0                 4055        0.014        0.000                      0                 4055        3.374        0.000                       0                  1652  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock    Waveform(ns)         Period(ns)      Frequency(MHz)
+-----    ------------         ----------      --------------
+fir_clk  {0.000 3.907}        7.813           127.992         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+fir_clk             4.368        0.000                      0                 4055        0.014        0.000                      0                 4055        3.374        0.000                       0                  1652  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  fir_clk
+  To Clock:  fir_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.368ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.014ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.374ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.368ns  (required time - arrival time)
+  Source:                 FIR_FILTER/arg__2/DSP_A_B_DATA_INST/CLK
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by fir_clk  {rise@0.000ns fall@3.907ns period=7.813ns})
+  Destination:            FIR_FILTER/odd_tap_pipe_process.mul_pipe_reg[22][-6]/D
+                            (rising edge-triggered cell FDRE clocked by fir_clk  {rise@0.000ns fall@3.907ns period=7.813ns})
+  Path Group:             fir_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.813ns  (fir_clk rise@7.813ns - fir_clk rise@0.000ns)
+  Data Path Delay:        3.320ns  (logic 2.047ns (61.661%)  route 1.273ns (38.339%))
+  Logic Levels:           10  (DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT4=2 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.115ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.158ns = ( 9.971 - 7.813 ) 
+    Source Clock Delay      (SCD):    2.930ns
+    Clock Pessimism Removal (CPR):    0.657ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.658ns (routing 0.767ns, distribution 0.891ns)
+  Clock Net Delay (Destination): 1.432ns (routing 0.696ns, distribution 0.736ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fir_clk rise edge)    0.000     0.000 r  
+    E4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_IBUF_inst/I
+    E4                   INBUF (Prop_INBUF_HDIOB_M_PAD_O)
+                                                      1.040     1.040 r  clk_IBUF_inst/INBUF_INST/O
+                         net (fo=1, routed)           0.000     1.040    clk_IBUF_inst/OUT
+    E4                   IBUFCTRL (Prop_IBUFCTRL_HDIOB_M_I_O)
+                                                      0.000     1.040 r  clk_IBUF_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.204     1.244    clk_IBUF
+    BUFGCE_HDIO_X2Y2     BUFGCE (Prop_BUFCE_BUFGCE_HDIO_I_O)
+                                                      0.028     1.272 r  clk_IBUF_BUFG_inst/O
+    X2Y4 (CLOCK_ROOT)    net (fo=1800, routed)        1.658     2.930    FIR_FILTER/arg__2/CLK
+    DSP48E2_X11Y127      DSP_A_B_DATA                                 r  FIR_FILTER/arg__2/DSP_A_B_DATA_INST/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48E2_X11Y127      DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_CLK_A2_DATA[6])
+                                                      0.234     3.164 r  FIR_FILTER/arg__2/DSP_A_B_DATA_INST/A2_DATA[6]
+                         net (fo=1, routed)           0.000     3.164    FIR_FILTER/arg__2/DSP_A_B_DATA.A2_DATA<6>
+    DSP48E2_X11Y127      DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[6]_A2A1[6])
+                                                      0.076     3.240 r  FIR_FILTER/arg__2/DSP_PREADD_DATA_INST/A2A1[6]
+                         net (fo=1, routed)           0.000     3.240    FIR_FILTER/arg__2/DSP_PREADD_DATA.A2A1<6>
+    DSP48E2_X11Y127      DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[6]_U[7])
+                                                      0.505     3.745 f  FIR_FILTER/arg__2/DSP_MULTIPLIER_INST/U[7]
+                         net (fo=1, routed)           0.000     3.745    FIR_FILTER/arg__2/DSP_MULTIPLIER.U<7>
+    DSP48E2_X11Y127      DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[7]_U_DATA[7])
+                                                      0.047     3.792 r  FIR_FILTER/arg__2/DSP_M_DATA_INST/U_DATA[7]
+                         net (fo=1, routed)           0.000     3.792    FIR_FILTER/arg__2/DSP_M_DATA.U_DATA<7>
+    DSP48E2_X11Y127      DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[7]_ALU_OUT[7])
+                                                      0.585     4.377 r  FIR_FILTER/arg__2/DSP_ALU_INST/ALU_OUT[7]
+                         net (fo=1, routed)           0.000     4.377    FIR_FILTER/arg__2/DSP_ALU.ALU_OUT<7>
+    DSP48E2_X11Y127      DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[7]_P[7])
+                                                      0.109     4.486 f  FIR_FILTER/arg__2/DSP_OUTPUT_INST/P[7]
+                         net (fo=1, routed)           0.425     4.911    FIR_FILTER/arg__2_n_98
+    SLICE_X88Y316        LUT4 (Prop_F6LUT_SLICEM_I3_O)
+                                                      0.148     5.059 r  FIR_FILTER/odd_tap_pipe_process.mul_pipe[22][0]_i_7/O
+                         net (fo=1, routed)           0.040     5.099    FIR_FILTER/odd_tap_pipe_process.mul_pipe[22][0]_i_7_n_0
+    SLICE_X88Y316        LUT5 (Prop_G6LUT_SLICEM_I4_O)
+                                                      0.037     5.136 r  FIR_FILTER/odd_tap_pipe_process.mul_pipe[22][0]_i_5/O
+                         net (fo=1, routed)           0.206     5.342    FIR_FILTER/odd_tap_pipe_process.mul_pipe[22][0]_i_5_n_0
+    SLICE_X88Y316        LUT6 (Prop_D6LUT_SLICEM_I0_O)
+                                                      0.051     5.393 r  FIR_FILTER/odd_tap_pipe_process.mul_pipe[22][0]_i_3/O
+                         net (fo=20, routed)          0.379     5.772    FIR_FILTER/odd_tap_pipe_process.mul_pipe[22][0]_i_3_n_0
+    SLICE_X87Y320        LUT4 (Prop_H5LUT_SLICEL_I1_O)
+                                                      0.158     5.930 r  FIR_FILTER/odd_tap_pipe_process.mul_pipe[22][-6]_i_2/O
+                         net (fo=1, routed)           0.175     6.105    FIR_FILTER/odd_tap_pipe_process.mul_pipe[22][-6]_i_2_n_0
+    SLICE_X87Y320        LUT5 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.097     6.202 r  FIR_FILTER/odd_tap_pipe_process.mul_pipe[22][-6]_i_1/O
+                         net (fo=1, routed)           0.048     6.250    FIR_FILTER/odd_tap_pipe_process.mul_pipe[22][-6]_i_1_n_0
+    SLICE_X87Y320        FDRE                                         r  FIR_FILTER/odd_tap_pipe_process.mul_pipe_reg[22][-6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fir_clk rise edge)    7.813     7.813 r  
+    E4                                                0.000     7.813 r  clk (IN)
+                         net (fo=0)                   0.000     7.813    clk_IBUF_inst/I
+    E4                   INBUF (Prop_INBUF_HDIOB_M_PAD_O)
+                                                      0.533     8.346 r  clk_IBUF_inst/INBUF_INST/O
+                         net (fo=1, routed)           0.000     8.346    clk_IBUF_inst/OUT
+    E4                   IBUFCTRL (Prop_IBUFCTRL_HDIOB_M_I_O)
+                                                      0.000     8.346 r  clk_IBUF_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.169     8.515    clk_IBUF
+    BUFGCE_HDIO_X2Y2     BUFGCE (Prop_BUFCE_BUFGCE_HDIO_I_O)
+                                                      0.024     8.539 r  clk_IBUF_BUFG_inst/O
+    X2Y4 (CLOCK_ROOT)    net (fo=1800, routed)        1.432     9.971    FIR_FILTER/clk_IBUF_BUFG
+    SLICE_X87Y320        FDRE                                         r  FIR_FILTER/odd_tap_pipe_process.mul_pipe_reg[22][-6]/C
+                         clock pessimism              0.657    10.628    
+                         clock uncertainty           -0.035    10.593    
+    SLICE_X87Y320        FDRE (Setup_GFF_SLICEL_C_D)
+                                                      0.025    10.618    FIR_FILTER/odd_tap_pipe_process.mul_pipe_reg[22][-6]
+  -------------------------------------------------------------------
+                         required time                         10.618    
+                         arrival time                          -6.250    
+  -------------------------------------------------------------------
+                         slack                                  4.368    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.014ns  (arrival time - required time)
+  Source:                 FIR_FILTER/odd_tap_seq_process.forward_pipe_reg[17][-4]/C
+                            (rising edge-triggered cell FDRE clocked by fir_clk  {rise@0.000ns fall@3.907ns period=7.813ns})
+  Destination:            FIR_FILTER/odd_tap_seq_process.registers_forwardpath_reg[18][-4]/D
+                            (rising edge-triggered cell FDRE clocked by fir_clk  {rise@0.000ns fall@3.907ns period=7.813ns})
+  Path Group:             fir_clk
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (fir_clk rise@0.000ns - fir_clk rise@0.000ns)
+  Data Path Delay:        0.254ns  (logic 0.060ns (23.653%)  route 0.194ns (76.347%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.178ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.926ns
+    Source Clock Delay      (SCD):    2.131ns
+    Clock Pessimism Removal (CPR):    0.617ns
+  Clock Net Delay (Source):      1.405ns (routing 0.696ns, distribution 0.709ns)
+  Clock Net Delay (Destination): 1.654ns (routing 0.767ns, distribution 0.887ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fir_clk rise edge)    0.000     0.000 r  
+    E4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_IBUF_inst/I
+    E4                   INBUF (Prop_INBUF_HDIOB_M_PAD_O)
+                                                      0.533     0.533 r  clk_IBUF_inst/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.533    clk_IBUF_inst/OUT
+    E4                   IBUFCTRL (Prop_IBUFCTRL_HDIOB_M_I_O)
+                                                      0.000     0.533 r  clk_IBUF_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.169     0.702    clk_IBUF
+    BUFGCE_HDIO_X2Y2     BUFGCE (Prop_BUFCE_BUFGCE_HDIO_I_O)
+                                                      0.024     0.726 r  clk_IBUF_BUFG_inst/O
+    X2Y4 (CLOCK_ROOT)    net (fo=1800, routed)        1.405     2.131    FIR_FILTER/clk_IBUF_BUFG
+    SLICE_X80Y295        FDRE                                         r  FIR_FILTER/odd_tap_seq_process.forward_pipe_reg[17][-4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X80Y295        FDRE (Prop_EFF2_SLICEL_C_Q)
+                                                      0.060     2.191 r  FIR_FILTER/odd_tap_seq_process.forward_pipe_reg[17][-4]/Q
+                         net (fo=3, routed)           0.194     2.384    FIR_FILTER/odd_tap_seq_process.forward_pipe_reg[17]_35[11]
+    SLICE_X80Y304        FDRE                                         r  FIR_FILTER/odd_tap_seq_process.registers_forwardpath_reg[18][-4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fir_clk rise edge)    0.000     0.000 r  
+    E4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_IBUF_inst/I
+    E4                   INBUF (Prop_INBUF_HDIOB_M_PAD_O)
+                                                      1.040     1.040 r  clk_IBUF_inst/INBUF_INST/O
+                         net (fo=1, routed)           0.000     1.040    clk_IBUF_inst/OUT
+    E4                   IBUFCTRL (Prop_IBUFCTRL_HDIOB_M_I_O)
+                                                      0.000     1.040 r  clk_IBUF_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.204     1.244    clk_IBUF
+    BUFGCE_HDIO_X2Y2     BUFGCE (Prop_BUFCE_BUFGCE_HDIO_I_O)
+                                                      0.028     1.272 r  clk_IBUF_BUFG_inst/O
+    X2Y4 (CLOCK_ROOT)    net (fo=1800, routed)        1.654     2.926    FIR_FILTER/clk_IBUF_BUFG
+    SLICE_X80Y304        FDRE                                         r  FIR_FILTER/odd_tap_seq_process.registers_forwardpath_reg[18][-4]/C
+                         clock pessimism             -0.617     2.309    
+    SLICE_X80Y304        FDRE (Hold_AFF2_SLICEL_C_D)
+                                                      0.062     2.371    FIR_FILTER/odd_tap_seq_process.registers_forwardpath_reg[18][-4]
+  -------------------------------------------------------------------
+                         required time                         -2.371    
+                         arrival time                           2.384    
+  -------------------------------------------------------------------
+                         slack                                  0.014    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         fir_clk
+Waveform(ns):       { 0.000 3.907 }
+Period(ns):         7.813
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location          Pin
+Min Period        n/a     BUFGCE/I     n/a            1.290         7.813       6.523      BUFGCE_HDIO_X2Y2  clk_IBUF_BUFG_inst/I
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.532         3.906       3.374      SLICE_X96Y314     axis_last_shift_reg[26]_srl27___FIR_FILTER_valid_shift_reg_r_25/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.532         3.907       3.375      SLICE_X96Y314     axis_last_shift_reg[26]_srl27___FIR_FILTER_valid_shift_reg_r_25/CLK
+
+
+

@@ -1,0 +1,55 @@
+# Simultaneously Switching Noise (SSN) Report
+# Version: 1.0
+# Created on: Wed Oct  2 11:33:59 2024
+# Result Name: 
+# Project Name: firfiltersystem
+# Project Family: Zynq UltraScale+
+# Part: xczu7ev-ffvc1156
+# Temperature Grade: extended
+# SSN Data Version: Production
+# Package Version: PRODUCTION 1.2 10/30/2017
+# Package Pin Delay Version: PRODUCTION 1.0 9/2/2016
+
+IO Bank,VCCO,Signal Name,Pin Number,IO Standard,Slew Rate,Drive (mA),OUTPUT_IMPEDANCE, PRE_EMPHASIS,LVDS_PRE_EMPHASIS,OFFCHIP_TERM,Remaining Margin (%),Result, Notes
+68,1.8,m_axis_filter_tdata[0],B11,LVCMOS18,SLOW,12,,,,FP_VTT_50,70.4,PASS,
+68,1.8,m_axis_filter_tdata[1],A11,LVCMOS18,SLOW,12,,,,FP_VTT_50,70.8,PASS,
+68,1.8,m_axis_filter_tdata[2],A8,LVCMOS18,SLOW,12,,,,FP_VTT_50,68.5,PASS,
+68,1.8,m_axis_filter_tdata[3],A7,LVCMOS18,SLOW,12,,,,FP_VTT_50,72.7,PASS,
+68,1.8,m_axis_filter_tdata[4],B10,LVCMOS18,SLOW,12,,,,FP_VTT_50,66.0,PASS,
+68,1.8,m_axis_filter_tdata[5],A10,LVCMOS18,SLOW,12,,,,FP_VTT_50,63.8,PASS,
+68,1.8,m_axis_filter_tdata[6],B6,LVCMOS18,SLOW,12,,,,FP_VTT_50,77.5,PASS,
+68,1.8,m_axis_filter_tdata[7],A6,LVCMOS18,SLOW,12,,,,FP_VTT_50,75.7,PASS,
+68,1.8,m_axis_filter_tdata[8],B9,LVCMOS18,SLOW,12,,,,FP_VTT_50,65.1,PASS,
+68,1.8,m_axis_filter_tdata[9],B8,LVCMOS18,SLOW,12,,,,FP_VTT_50,70.3,PASS,
+68,1.8,m_axis_filter_tdata[10],C7,LVCMOS18,SLOW,12,,,,FP_VTT_50,74.9,PASS,
+68,1.8,m_axis_filter_tdata[11],C6,LVCMOS18,SLOW,12,,,,FP_VTT_50,73.5,PASS,
+68,1.8,m_axis_filter_tdata[12],D12,LVCMOS18,SLOW,12,,,,FP_VTT_50,71.2,PASS,
+68,1.8,m_axis_filter_tdata[13],C11,LVCMOS18,SLOW,12,,,,FP_VTT_50,72.7,PASS,
+68,1.8,m_axis_filter_tdata[14],F12,LVCMOS18,SLOW,12,,,,FP_VTT_50,68.9,PASS,
+68,1.8,m_axis_filter_tdata[15],E12,LVCMOS18,SLOW,12,,,,FP_VTT_50,73.5,PASS,
+68,1.8,m_axis_filter_tdata[16],D11,LVCMOS18,SLOW,12,,,,FP_VTT_50,70.0,PASS,
+68,1.8,m_axis_filter_tdata[17],D10,LVCMOS18,SLOW,12,,,,FP_VTT_50,71.0,PASS,
+68,1.8,m_axis_filter_tdata[18],H13,LVCMOS18,SLOW,12,,,,FP_VTT_50,78.0,PASS,
+68,1.8,m_axis_filter_tdata[19],H12,LVCMOS18,SLOW,12,,,,FP_VTT_50,71.1,PASS,
+68,1.8,m_axis_filter_tdata[20],F11,LVCMOS18,SLOW,12,,,,FP_VTT_50,64.2,PASS,
+68,1.8,m_axis_filter_tdata[21],E10,LVCMOS18,SLOW,12,,,,FP_VTT_50,67.0,PASS,
+68,1.8,m_axis_filter_tdata[22],H11,LVCMOS18,SLOW,12,,,,FP_VTT_50,72.4,PASS,
+68,1.8,m_axis_filter_tdata[23],G11,LVCMOS18,SLOW,12,,,,FP_VTT_50,64.7,PASS,
+68,1.8,m_axis_filter_tdata[24],G10,LVCMOS18,SLOW,12,,,,FP_VTT_50,66.8,PASS,
+68,1.8,m_axis_filter_tdata[25],F10,LVCMOS18,SLOW,12,,,,FP_VTT_50,61.6,PASS,
+68,1.8,m_axis_filter_tdata[26],H9,LVCMOS18,SLOW,12,,,,FP_VTT_50,77.3,PASS,
+68,1.8,m_axis_filter_tdata[27],G9,LVCMOS18,SLOW,12,,,,FP_VTT_50,66.7,PASS,
+68,1.8,m_axis_filter_tdata[28],E9,LVCMOS18,SLOW,12,,,,FP_VTT_50,65.3,PASS,
+68,1.8,m_axis_filter_tdata[29],D9,LVCMOS18,SLOW,12,,,,FP_VTT_50,74.0,PASS,
+68,1.8,m_axis_filter_tdata[30],F8,LVCMOS18,SLOW,12,,,,FP_VTT_50,70.0,PASS,
+68,1.8,m_axis_filter_tdata[31],E8,LVCMOS18,SLOW,12,,,,FP_VTT_50,70.6,PASS,
+88,1.8,m_axis_filter_tlast,F6,LVCMOS18,SLOW,12,,,,FP_VTT_50,86.1,PASS,
+88,1.8,m_axis_filter_tvalid,E5,LVCMOS18,SLOW,12,,,,FP_VTT_50,87.7,PASS,
+88,1.8,s_axis_filter_tready,D6,LVCMOS18,SLOW,12,,,,FP_VTT_50,86.8,PASS,
+
+
+# Reference Links
+# Safe to Ignore SSN Failure on MIG Designs - https://support.xilinx.com/s/article/36141
+# SSN Mitigation Strategy - http://www.xilinx.com/support/documentation/user_guides/ug571-ultrascale-selectio.pdf#search=%22SSO%22
+# Off-chip Terminations - http://www.xilinx.com/support/documentation/user_guides/ug571-ultrascale-selectio.pdf#search=%22SSO%22
+# Valid Property Combinations for Output Ports - http://www.xilinx.com/support/documentation/user_guides/ug571-ultrascale-selectio.pdf#search=%22 1-49 %22

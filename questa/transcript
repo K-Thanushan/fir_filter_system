@@ -1,0 +1,26 @@
+vsim -voptargs=+acc work.fir_filter_tb
+# vsim -voptargs="+acc" work.fir_filter_tb 
+# Start time: 14:05:00 on Jul 11,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.fir_filter_tb(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_filter_parameterized(firgeneralbehavioural)#1
+add wave -position insertpoint sim:/fir_filter_tb/*
+add wave -position insertpoint sim:/fir_filter_tb/dut/*
+run
+# ** Note: $finish    : C:/Work/fir_filter_system/tb/fir_filter_tb.sv(43)
+#    Time: 75 ns  Iteration: 1  Instance: /fir_filter_tb
+# 1
+# Break in Module fir_filter_tb at C:/Work/fir_filter_system/tb/fir_filter_tb.sv line 43
+run
+run
+run
+run
+run
+run
+# End time: 14:08:01 on Jul 11,2024, Elapsed time: 0:03:01
+# Errors: 0, Warnings: 1

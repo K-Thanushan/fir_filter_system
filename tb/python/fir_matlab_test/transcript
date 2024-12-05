@@ -1,0 +1,110 @@
+# do sim_build/runsim.do
+# Questa Intel Starter FPGA Edition-64 vmap 2024.1 Lib Mapping Utility 2024.04 Apr 19 2024
+# vmap -c 
+# ** Warning: Local modelsim.ini already exists and will not be overwritten. -c will be ignored.
+# Questa Intel Starter FPGA Edition-64 vmap 2024.1 Lib Mapping Utility 2024.04 Apr 19 2024
+# vmap work sim_build/work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vcom 2024.1 Compiler 2024.04 Apr 19 2024
+# Start time: 09:44:55 on Oct 07,2024
+# vcom -work work "+acc" C:/Work/fir_filter_system/packages/fir_fixed_generics_package.vhdl C:/Work/fir_filter_system/packages/fixed_to_signed_package.vhdl C:/Work/fir_filter_system/rtl/fir_filter_fixed.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package instance fixed_pkg
+# -- Loading package NUMERIC_STD
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling package fir_fixed_generics_package
+# -- Loading package fir_fixed_generics_package
+# -- Compiling package fixed_to_signed_package
+# -- Compiling package body fixed_to_signed_package
+# -- Loading package fixed_to_signed_package
+# -- Loading package fixed_to_signed_package
+# -- Compiling entity fir_filter_fixed
+# -- Compiling architecture firfixed of fir_filter_fixed
+# End time: 09:44:55 on Oct 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish exit -t 1ps -foreign "cocotb_init C:/Python312/Lib/site-packages/cocotb/libs/cocotbfli_modelsim.dll" sim_build/work.fir_filter_fixed 
+# Start time: 09:44:55 on Oct 07,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.1 win64 Apr 19 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_fixed_generics_package
+# Loading work.fixed_to_signed_package(body)
+# Loading work.fir_filter_fixed(firfixed)#1
+# Loading C:/Python312/Lib/site-packages/cocotb/libs/cocotbfli_modelsim.dll
+#      -.--ns INFO     gpi                                ..ib\fli\FliImpl.cpp:1150 in cocotb_init                     cocotb_init called
+#      -.--ns INFO     gpi                                ..mbed\gpi_embed.cpp:81   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:101  in gpi_print_registered_impl       FLI registered
+#      0.00ns INFO     cocotb                             Running on ModelSim for QuestaIntel Starter FPGA Edition-64 version 2024.1 2024.04
+# 
+#      0.00ns INFO     cocotb                             Running tests with cocotb v1.9.1 from C:\Python312\Lib\site-packages\cocotb
+# 
+#      0.00ns INFO     cocotb                             Seeding Python random module with 1728274497
+# 
+#      0.00ns INFO     cocotb.regression                  Found test fir_matlab_test.fir_matlab_test
+# 
+#      0.00ns INFO     cocotb.regression                  running fir_matlab_test (1/1)
+# 
+#                                                           Testing the filter using test vectors generated from MATLAB
+# 
+#      0.00ns INFO     cocotb.regression                  fir_matlab_test failed
+# 
+#                                                         Traceback (most recent call last):
+# 
+#                                                           File "C:\Work\fir_filter_system\tb\python\fir_matlab_test\fir_matlab_test.py", line 58, in fir_matlab_test
+# 
+#                                                             input_data.append(0)
+# 
+#                                                             ^^^^^^^^^^^^^^^^^
+# 
+#                                                         AttributeError: 'numpy.ndarray' object has no attribute 'append'
+# 
+#      0.00ns INFO     cocotb.regression                  *****************************************************************************************
+# 
+#                                                         ** TEST                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+# 
+#                                                         *****************************************************************************************
+# 
+#                                                         ** fir_matlab_test.fir_matlab_test   FAIL           0.00           0.02          0.06  **
+# 
+#                                                         *****************************************************************************************
+# 
+#                                                         ** TESTS=1 PASS=0 FAIL=1 SKIP=0                     0.00           0.29          0.00  **
+# 
+#                                                         *****************************************************************************************
+# 
+#                                                         
+# 
+# Simulation halt requested by foreign interface.
+# End time: 09:44:57 on Oct 07,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1

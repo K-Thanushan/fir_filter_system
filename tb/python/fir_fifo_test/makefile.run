@@ -1,0 +1,83 @@
+#************************** BLOCK DESIGN SIMULATION COCOTB *****************************
+TOPLEVEL_LANG ?= verilog
+PWD:=$(shell pwd)
+
+# Debug 
+# COCOTB_LOG_LEVEL := DEBUG
+
+export PYTHONPATH := $(PWD)/../model:$(PYTHONPATH)
+BLOCK_SOURCES_FOR_QUESTASIM = C:/Work/fir_filter_system/work/firfiltersystem/firfiltersystem.ip_user_files/bd/fir_fifo_system
+SCRIPT_SOURCES_FOR_QUESTASIM = C:/Work/fir_filter_system/work/firfiltersystem/firfiltersystem.ip_user_files/sim_scripts/fir_fifo_system/questa
+BLOCK_IP_SOURCES_FOR_QUESTASIM = C:/Work/fir_filter_system/work/firfiltersystem/firfiltersystem.gen/sources_1/bd/fir_fifo_system/ipshared
+SOURCES_FOR_QUESTASIM = C:/Work/fir_filter_system
+XILINX_IPS_SOURCES = C:/Xilinx/Vivado/2023.2/data
+
+SIM_ARGS := -l elaborate.log +acc=npr -suppress 10016 -L work -L unisims_ver -L unimacro_ver -L secureip -work work work.glbl
+
+VHDL_SOURCES = $(SOURCES_FOR_QUESTASIM)/packages/fir_fixed_generics_package.vhdl \
+            $(SOURCES_FOR_QUESTASIM)/packages/fixed_to_signed_package.vhdl \
+            $(SOURCES_FOR_QUESTASIM)/rtl/fir_filter_fixed.vhdl \
+            $(SOURCES_FOR_QUESTASIM)/rtl/fir_filter_axis.vhdl \
+            $(XILINX_IPS_SOURCES)/ip/xpm/xpm_VCOMP.vhd \
+            $(BLOCK_IP_SOURCES_FOR_QUESTASIM)/ac72/hdl/fifo_generator_v13_2_rfs.vhd
+
+ifeq ($(TOPLEVEL_LANG), verilog)
+    VERILOG_INCLUDE_DIRS = $(XILINX_IPS_SOURCES)/xilinx_vip/include
+    VERILOG_SOURCES = $(XILINX_IPS_SOURCES)/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv \
+                    $(XILINX_IPS_SOURCES)/ip/xpm/xpm_memory/hdl/xpm_memory.sv \
+                    $(XILINX_IPS_SOURCES)/xilinx_vip/include/xil_common_vip_macros.svh \
+                    $(XILINX_IPS_SOURCES)/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv \
+                    $(XILINX_IPS_SOURCES)/xilinx_vip/hdl/axi_vip_axi4pc.sv \
+                    $(XILINX_IPS_SOURCES)/xilinx_vip/hdl/xil_common_vip_pkg.sv \
+                    $(XILINX_IPS_SOURCES)/xilinx_vip/hdl/axi4stream_vip_pkg.sv \
+                    $(XILINX_IPS_SOURCES)/xilinx_vip/hdl/axi_vip_pkg.sv \
+                    $(XILINX_IPS_SOURCES)/xilinx_vip/hdl/axi4stream_vip_if.sv \
+                    $(XILINX_IPS_SOURCES)/xilinx_vip/hdl/axi_vip_if.sv \
+                    $(XILINX_IPS_SOURCES)/xilinx_vip/hdl/clk_vip_if.sv \
+                    $(XILINX_IPS_SOURCES)/xilinx_vip/hdl/rst_vip_if.sv \
+                    $(BLOCK_IP_SOURCES_FOR_QUESTASIM)/ac72/hdl/fif0_generator_v13_2_rfs.v \
+                    $(BLOCK_IP_SOURCES_FOR_QUESTASIM)/ac72/simulation/fifo_generator_vlog_beh.v \
+                    $(BLOCK_SOURCES_FOR_QUESTASIM)/ip/fir_fifo_system_fifo_generator_0_0/sim/fir_fifo_system_fifo_generator_0_0.v \
+                    $(BLOCK_SOURCES_FOR_QUESTASIM)/ip/fir_fifo_system_fifo_generator_0_1/sim/fir_fifo_system_fifo_generator_0_1.v \
+                    $(SOURCES_FOR_QUESTASIM)/rtl/fir_filter_axis_wrapper.v \
+                    $(BLOCK_SOURCES_FOR_QUESTASIM)/ip/fir_fifo_system_fir_filter_axis_wrap_0_0/sim/fir_fifo_system_fir_filter_axis_wrap_0_0.v \
+                    $(BLOCK_IP_SOURCES_FOR_QUESTASIM)/891d/hdl/xpm_cdc_gen_v1_0_vl_rfs.v \
+                    $(BLOCK_SOURCES_FOR_QUESTASIM)/ip/fir_fifo_system_xpm_cdc_gen_0_1/sim/fir_fifo_system_xpm_cdc_gen_0_1.v \
+                    $(BLOCK_SOURCES_FOR_QUESTASIM)/sim/fir_fifo_system.v $(SCRIPT_SOURCES_FOR_QUESTASIM)/glbl.v
+else ifeq ($(TOPLEVEL_LANG), vhdl)
+    VHDL_SOURCES = $(SOURCES_FOR_QUESTASIM)/packages/fir_fixed_generics_package.vhdl
+    ifneq ($(filter $(SIM),ius xcelium),)
+        COMPILE_ARGS += -2008
+    endif
+else
+    $(error A valid value (verilog or vhdl) was not provided for TOPLEVEL_LANG=$(TOPLEVEL_LANG))
+endif
+
+TOPLEVEL := fir_fifo_system
+MODULE   := fir_fifo_test
+
+include $(shell cocotb-config --makefiles)/Makefile.sim
+#***************************************************************************************
+
+#************************** PLOT GRAPHS - POST SIMULATION ******************************
+graphs:
+	python graphs.py
+#***************************************************************************************
+
+#************************** CLEANING THE PREVIOUS RUN **********************************
+# Simulation directory to be cleaned
+DIR := C:/Work/fir_filter_system/tb/python/fir_fifo_test
+
+#List of files to be cleaned
+TARGETS := transcript results.xml modelsim.ini __pycache__ sim_build
+
+clean::
+	@for target in $(TARGETS); do \
+		if [ -e $(DIR)/$$target ]; then \
+			echo "Removing $(DIR)/$$target"; \
+			rm -rf $(DIR)/$$target; \
+		else \
+			echo "$(DIR)/$$target does not exist"; \
+		fi \
+	done
+#***************************************************************************************
