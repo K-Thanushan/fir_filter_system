@@ -1,8 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1728274497" />
-    <testcase name="fir_matlab_test" classname="fir_matlab_test" file="C:\Work\fir_filter_system\tb\python\fir_matlab_test\fir_matlab_test.py" lineno="48" time="0.015628576278686523" sim_time_ns="0.001" ratio_time="0.06398535491449406">
-      <failure message="Test failed with RANDOM_SEED=1728274497" />
-    </testcase>
-  </testsuite>
-</testsuites>
